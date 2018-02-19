@@ -86,12 +86,12 @@ public class LangtonsAntView extends View implements Runnable {
         magicNumber = 60 / screenHeightDpi;
 
         /*
-            60 = static height of the layout that holds the buttons
-            I'm sure there's a better way to do all this
-            so I might return to this when I get better at Android programming
+            60 = static height of the layout that holds the buttons.
+            The magic number stores the size of the layout in percents
+            compared to the size of the screen.
          */
 
-        availableHeight = screenHeight - (screenHeight * magicNumber);
+        availableHeight = screenHeight - (screenHeight * magicNumber); //We subtract the size of the button layout
         gridCellsY = ((int) availableHeight / 40);
         simulationGrid = new boolean[gridCellsY][gridCellsX];
     }
